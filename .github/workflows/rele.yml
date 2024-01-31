@@ -36,6 +36,7 @@ jobs:
     - name: Create GitHub Release
       uses: actions/create-release@v1
       with:
+        token: ${{ secrets.SPAT }}
         tag_name: ${{ steps.extract_version.outputs.VERSION }}
         release_name: Release ${{ steps.extract_version.outputs.VERSION }}
         body: |
